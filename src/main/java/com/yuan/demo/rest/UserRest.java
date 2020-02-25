@@ -23,7 +23,7 @@ public class UserRest {
     }
 
     @PostMapping("/save")
-    public void addUser(@RequestBody AddUserDto user) {
+    public void addUser(@Validated @RequestBody AddUserDto user) {
         UserEntity userEntity = new UserEntity();
         userEntity.setName(user.getName());
         userEntity.setAge(user.getAge());

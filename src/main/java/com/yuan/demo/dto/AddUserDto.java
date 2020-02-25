@@ -5,7 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Setter
 @Getter
@@ -13,6 +13,6 @@ import javax.validation.constraints.NotEmpty;
 public class AddUserDto {
     @NotBlank
     private String name;
-    @NotEmpty
+    @NotNull
     private Integer age;
 }
