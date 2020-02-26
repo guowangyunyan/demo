@@ -22,6 +22,12 @@ public class UserRest {
         return "add";
     }
 
+    @RequestMapping("/show")
+    public String show() {
+        int a = 10 / 0;
+        return "index";
+    }
+
     @PostMapping("/save")
     public void addUser(@Validated @RequestBody AddUserDto user) {
         UserEntity userEntity = new UserEntity();
